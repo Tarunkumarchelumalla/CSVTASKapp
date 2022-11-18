@@ -1,0 +1,23 @@
+.bg{
+
+    width: 500px;
+    height: 500px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.wrapper{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    width:100%;
+    height: 100%;
+}
+.div1{
+    margin-left: 25px;
+}
+.f{
+    display: flex;
+    width: 250px;
+    flex-direction: column;
+   
+}
