@@ -54,6 +54,8 @@ const options = {
 
  const ab=await getapi(api_url);
 //  console.log(ab)
+
+
     ab.map(as=>{
                     
                  
@@ -73,9 +75,9 @@ const options = {
         skipEmptyLines:true,
         complete:function(result){
           const ag=result.data.sort(GetSortOrder("name")); 
- 
+
     ag.map(as=>{
-                    
+                  
                  
       let row1 =as.name+","+as.city+","+as.gender+","+as.email+"\n"
       csvinfo+=row1;
@@ -113,14 +115,19 @@ skipEmptyLines:true,
 complete:function(result){
 
 var username=document.getElementById("userdata").value;
-console.log(username);
+  if(username){
 userdata=result.data;
 userdata.filter((data)=>data.name === username).map((curr)=>{
   console.log(curr);
 
 const h=JSON.stringify(curr)
   document.getElementById("uta").innerHTML=h;
+  
 })
+}
+else{
+  alert("enter name field")
+}
 }
 })
 });
